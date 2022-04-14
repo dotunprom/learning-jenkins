@@ -38,8 +38,8 @@ pipeline {
            steps {
                echo "two"
                sh 'echo ENV_URL = ${ENV_URL}'
-            }
-        }
+         }
+       }
 
     }
 }
