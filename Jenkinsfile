@@ -29,10 +29,12 @@ pipeline {
               '''
             }
         }
-    environment{
-      ENV_URL = "stage.google.com"
+
 
       stage("two") {
+         environment{
+            ENV_URL = "stage.google.com"
+         }
            steps {
                echo "two"
                sh 'echo ENV_URL = ${ENV_URL}'
