@@ -20,10 +20,6 @@ pipeline {
     }
 
 
-    stages {
-//       options {
-//           ansiColor('xterm')
-//       }
         stage('one') {
             steps {
 //               addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
@@ -35,8 +31,10 @@ pipeline {
             }
         }
 
-
       stage("two") {
+            options {
+                ansiColor('xterm')
+      }
          environment{
             ENV_URL = "stage.google.com"
          }
