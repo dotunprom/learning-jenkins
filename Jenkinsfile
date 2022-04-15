@@ -21,9 +21,9 @@ pipeline {
 
 
     stages {
-      options {
-          ansiColor('xterm')
-      }
+//       options {
+//           ansiColor('xterm')
+//       }
         stage('one') {
             steps {
 //               addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
