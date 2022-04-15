@@ -3,6 +3,7 @@ pipeline {
 
     options {
       ansiColor('xterm')
+//       pipline syntax
 }
 
     environment{
@@ -33,7 +34,7 @@ pipeline {
                echo '\033[34mHello\033[0m \033[33mcolorful\033[0m \033[35mworld!\033[0m'
                sh 'echo -e "\\e[Hello "'
                sh 'terraform apply -auto-approve'
-         }
+           }
        }
 
     }
