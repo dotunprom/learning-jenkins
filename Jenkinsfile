@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    options {
+      ansiColor('xterm')
+}
+
     environment{
       ENV_URL = "pipeline.google.com"
       SSH_CRED = credentials("SSH")
@@ -26,7 +30,9 @@ pipeline {
            steps {
                echo "two"
                sh 'echo ENV_URL = ${ENV_URL}'
-               sh 'env'
+               echo '\033[34mHello\033[0m \033[33mcolorful\033[0m \033[35mworld!\033[0m'
+               sh 'echo -e "\\e[Hello "'
+               sh 'terraform apply -auto-approve'
          }
        }
 
