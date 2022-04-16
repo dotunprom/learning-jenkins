@@ -49,4 +49,4 @@ triggers {
                sh 'echo -e "\\e[31mHello "'
 //                sh 'terraform apply -auto-approve'
            }
-       }
+}
