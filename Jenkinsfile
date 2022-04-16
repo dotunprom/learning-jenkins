@@ -39,6 +39,7 @@ triggers {
             options {
                 ansiColor('xterm')
       }
+
          environment{
             ENV_URL = "stage.google.com"
       }
@@ -49,4 +50,5 @@ triggers {
                sh 'echo -e "\\e[31mHello "'
 //                sh 'terraform apply -auto-approve'
            }
+      }
 }
