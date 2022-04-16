@@ -41,7 +41,7 @@ triggers {
       }
          environment{
             ENV_URL = "stage.google.com"
-         }
+      }
            steps {
                echo "two"
                sh 'echo ENV_URL = ${ENV_URL}'
@@ -50,5 +50,3 @@ triggers {
 //                sh 'terraform apply -auto-approve'
            }
        }
-
- }
