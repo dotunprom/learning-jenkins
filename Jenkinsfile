@@ -22,6 +22,8 @@ triggers {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
+
+    stages {
         stage('one') {
             steps {
               addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
@@ -49,4 +51,5 @@ triggers {
 //                sh 'terraform apply -auto-approve'
            }
       }
+}
 }
