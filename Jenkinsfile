@@ -11,7 +11,9 @@ pipeline {
       SSH_CRED = credentials("SSH")
 }
 
-
+triggers {
+  pollSCM('/2 * * * *')
+}
 
  parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
@@ -20,11 +22,9 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-
-
         stage('one') {
             steps {
-//               addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
+              addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
               sh '''
                 echo Hello1
                 echo Hello2
