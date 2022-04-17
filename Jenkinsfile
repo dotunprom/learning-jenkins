@@ -12,7 +12,7 @@ pipeline {
 }
 
 triggers {
-  pollSCM('/2 * * * *')
+  pollSCM('*/2 * * * *')
 }
 
  parameters {
