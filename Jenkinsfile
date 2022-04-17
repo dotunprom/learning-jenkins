@@ -51,4 +51,6 @@ triggers {
 //                sh 'terraform apply -auto-approve'
            }
       }
+  }
+
 }
