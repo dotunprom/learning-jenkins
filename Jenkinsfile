@@ -47,7 +47,7 @@ tools {
       stage("two") {
 
         when {
-          environment name: 'CHOICE', value: 'One'
+          environment name: 'CHOICE', value: 'Two'
         }
             options {
                 ansiColor('xterm')
