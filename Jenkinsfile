@@ -28,7 +28,12 @@ tools {
     }
 
     stages {
+
         stage('one') {
+          when {
+            environment name: 'CHOICE', value: 'One'
+          }
+
             steps {
 //               addShortText background: '', borderColor: '', color: '', link: '', text: 'ONE'
               sh '''
@@ -40,21 +45,25 @@ tools {
         }
 
       stage("two") {
+
+        when {
+          environment name: 'CHOICE', value: 'One'
+        }
             options {
                 ansiColor('xterm')
-      }
+        }
 
          environment{
             ENV_URL = "stage.google.com"
-      }
+        }
 
- input {
-                 message "Should we continue?"
-                 ok "Yes, we should."
-                 submitter "alice,bob"
-                 parameters {
-                     string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
-                 }
+//        input {
+//                  message "Should we continue?"
+//                  ok "Yes, we should."
+//                  submitter "alice,bob"
+//                  parameters {
+//                      string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+//                  }
              }
 
 
