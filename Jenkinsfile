@@ -80,7 +80,7 @@ tools {
 
   post{
     always{
-      cleanws()
+      cleanWs()
         sh 'echo post'
       }
   }
