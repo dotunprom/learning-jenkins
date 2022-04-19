@@ -78,8 +78,8 @@ tools {
       }
   }
 
-  post{
-    always{
+  post {
+    always {
       cleanWs()
         sh 'echo post'
       }
