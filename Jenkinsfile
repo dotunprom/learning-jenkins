@@ -78,10 +78,10 @@ tools {
       }
   }
 
-  post {
-    always {
-      cleanWs()
-        sh 'echo post'
-      }
-  }
+//   post {
+//     always {
+//       cleanWs()
+//         sh 'echo post'
+//       }
+//   }
 }
