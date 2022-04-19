@@ -77,4 +77,11 @@ tools {
            }
       }
   }
+
+  post{
+    always{
+      cleanws()
+        sh 'echo post'
+      }
+  }
 }
