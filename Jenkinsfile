@@ -85,3 +85,37 @@ tools {
 //       }
 //   }
 }
+
+
+pipeline{
+  agents{
+    node { label 'workstation'} // Agent node name
+    //label 'ansible' //Agent  labels
+    }
+
+
+  stages {
+    stages('parallel') {
+      parallel{
+
+        stage('one'){
+          steps{
+            sh 'sleep 10'
+          }
+        }
+
+
+         stage('one'){
+            steps{
+              sh 'sleep 10'
+            }
+         }
+
+
+         stage('one'){
+            steps{
+               sh 'sleep 10'
+            }
+         }
+      }
+    }
